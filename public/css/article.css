@@ -1,0 +1,162 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.dropbtn {
+    background-color: black;
+    border: none;
+    font-size: 36px;
+
+    text-decoration: none;
+    color: white;
+    font-size: 36px;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    right: 10px;
+    top: 48px;
+    margin-top: 3px;
+    display: none;
+    position: absolute;
+    background-color: black;
+    /* min-width: 160px; */
+    width: 170px;
+    box-shadow: 0px 8px 16px 0px rgba(184, 184, 184, 0.2);
+    z-index: 1;
+  }
+  
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  
+  .dropdown-content a:hover {background-color: #f1f1f1}
+ 
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
+.center{
+    text-align: center;
+}
+.primary {
+    color: white;
+    margin: 30px;
+    text-shadow: 3px 3px black;
+    font-size: 4rem;
+    padding: 5px;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.maindiv{
+    /* border: 2px solid black; */
+    margin: 10px;
+    padding: 20px auto;
+}
+.divflex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.article{
+    margin: 30px auto;
+    padding: 10px;
+    width: 40%;
+    background-color: white;
+    /* border: 2px solid black; */
+}
+img{
+    width: 525px;
+    height: 400px;
+}
+.article:hover{
+    box-shadow: 0px 0px 60px 1px rgb(37, 37, 37);
+}
+a{
+    text-decoration: none;
+}
+
+#content:hover{
+    background-color: rgba(231, 224, 238, 0.315);
+    /* font-weight: bold; */
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: aqua;
+}
+
+/* Navigation Bar  */
+
+#logo{
+    border-radius: 80%;
+    position: absolute;
+    
+    left: 2px;
+}
+#logo:hover{
+    background-color: white;
+    cursor: pointer;
+    
+}
+#logo img{
+    position: center;
+    
+    margin: 0px 4px;
+    padding: 5px 4px;
+    height: 90%;
+    width: auto;
+}
+
+
+#navbar{
+    position: sticky;
+    display: flex;
+    background-color: black;
+    height: 139px;
+
+}
+#navbar ul{
+    position: absolute;
+    right: 38px;
+    margin: 18px 10px;
+    display: flex;
+    padding: 28px 20px;
+
+}
+
+#navbar ul li{
+    list-style: none;
+
+}
+#navbar ul li a{
+    margin: 10px 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 36px;
+    /* border: 2px solid; */
+}
+#navbar ul li a:hover{
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+}
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+    /* -moz-font-feature-settings: ; */
+     
+}
+h3{
+    font-size: 25px;
+}

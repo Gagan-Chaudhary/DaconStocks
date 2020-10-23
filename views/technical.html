@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/public/css/analysis.css">
+  <title>Technical Anaysis</title>
+</head>
+
+<body onload="myFunction()">
+ <div id="loading"></div>
+  <nav id="navbar">
+    <div id="logo">
+      <a href="/"><img src="/public/im/new.png" alt="DaconStocks.com"></a>
+
+    </div>
+    <ul>
+      <li class="item"><a href="/">Home</a></li>
+      <li class="item">
+        <div class="dropdown">
+          <div class="dropbtn"><a href="">Services</a></div>
+          <div class="dropdown-content">
+            <a href="/article">Articles</a>
+            <a href="/videos">Videos</a>
+            <a href="/technical">Analysis</a>
+          </div>
+        </div>
+      </li>
+      <li class="item"><a href="/about">About</a></li>
+      <li class="item"><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+  <h1 class="center primary">Technical Analysis</h1>
+  <section>
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
+        async>
+          {
+            "symbols": [
+              {
+                "proName": "FOREXCOM:SPXUSD",
+                "title": "S&P 500"
+              },
+              {
+                "proName": "FOREXCOM:NSXUSD",
+                "title": "Nasdaq 100"
+              },
+              {
+                "proName": "FX_IDC:EURUSD",
+                "title": "EUR/USD"
+              },
+              {
+                "proName": "BITSTAMP:BTCUSD",
+                "title": "BTC/USD"
+              },
+              {
+                "proName": "BITSTAMP:ETHUSD",
+                "title": "ETH/USD"
+              }
+            ],
+              "colorTheme": "dark",
+                "isTransparent": false,
+                  "displayMode": "adaptive",
+                    "locale": "in"
+          }
+        </script>
+    </div>
+    <!-- TradingView Widget END -->
+    <div class="heading">
+      <h1 class="center head">Advanced Real-Time Chart</h1>
+    </div>
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+      <div id="tradingview_c72e0"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+      <script type="text/javascript">
+        new TradingView.widget(
+          {
+            "width": 980,
+            "height": 610,
+            "symbol": "NASDAQ:AAPL",
+            "interval": "D",
+            "timezone": "Etc/UTC",
+            "theme": "light",
+            "style": "1",
+            "locale": "in",
+            "toolbar_bg": "#f1f3f6",
+            "enable_publishing": false,
+            "allow_symbol_change": true,
+            "container_id": "tradingview_c72e0"
+          }
+        );
+      </script>
+    </div>
+    <div class="heading">
+      <h1 class="head center">Forex Cross Rates</h1>
+    </div>
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <script type="text/javascript"
+        src="https://s3.tradingview.com/external-embedding/embed-widget-forex-cross-rates.js" async>
+          {
+            "width": "900",
+              "height": "500",
+                "currencies": [
+                  "EUR",
+                  "USD",
+                  "JPY",
+                  "GBP",
+                  "CHF",
+                  "AUD",
+                  "CAD",
+                  "NZD",
+                  "CNY"
+                ],
+                  "isTransparent": false,
+                    "colorTheme": "light",
+                      "locale": "in"
+          }
+        </script>
+    </div>
+    <!-- TradingView Widget END -->
+    <!-- TradingView Widget END -->
+    <div class="heading">
+      <h1 class="center head">Stock Market</h1>
+    </div>
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-hotlists.js" async>
+        {
+          "colorTheme": "light",
+            "dateRange": "12m",
+              "exchange": "BSE",
+                "showChart": true,
+                  "locale": "in",
+                    "largeChartUrl": "",
+                      "isTransparent": false,
+                        "width": "940",
+                          "height": "600",
+                            "plotLineColorGrowing": "rgba(33, 150, 243, 1)",
+                              "plotLineColorFalling": "rgba(33, 150, 243, 1)",
+                                "gridLineColor": "rgba(240, 243, 250, 1)",
+                                  "scaleFontColor": "rgba(120, 123, 134, 1)",
+                                    "belowLineFillColorGrowing": "rgba(33, 150, 243, 0.12)",
+                                      "belowLineFillColorFalling": "rgba(33, 150, 243, 0.12)",
+                                        "symbolActiveColor": "rgba(33, 150, 243, 0.12)"
+        }
+      </script>
+    </div>
+    <!-- TradingView Widget END -->
+    <div class="heading">
+      <h1 class="head center">Cryptography Currency</h1>
+    </div>
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
+        {
+          "width": 1000,
+            "height": 490,
+              "defaultColumn": "overview",
+                "screener_type": "crypto_mkt",
+                  "displayCurrency": "USD",
+                    "colorTheme": "light",
+                      "locale": "in"
+        }
+      </script>
+    </div>
+    <!-- TradingView Widget END -->
+  </section>
+  <footer>
+    <div class="center">
+      Copyright &copy; www.DaconStocks.com <br> All Rights Reserved!
+    </div>
+
+  </footer>
+    <script>
+		// $(document).ready(function(){
+			// 	$('div#loading').removeAttr('id');
+		// });
+		var preloader = document.getElementById("loading");
+		// window.addEventListener('load', function(){
+		// 	preloader.style.display = 'none';
+		// 	})
+
+		function myFunction(){
+			preloader.style.display = 'none';
+		};
+	</script>
+
+</body>
+
+</html>

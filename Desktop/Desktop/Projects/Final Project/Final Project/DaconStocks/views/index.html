@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+    <script src="/public/js/index_js.js"></script>
+
+</head>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/7.23.0/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="/__/firebase/7.23.0/firebase-analytics.js"></script>
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+<body>
+    <div></div>
+    <nav id="navbar">
+        <div id="logo">
+            <a href="/"><img src="/public/im/new.png" alt="DaconStocks.com"></a>
+
+        </div>
+        <ul>
+            <li class="item"><a href="/">Home</a></li>
+
+            <li class="item">
+                <div class="dropdown">
+                    <div class="dropbtn"><a href="">Services</a></div>
+                    <div class="dropdown-content">
+                        <a href="/article">Articles</a>
+                        <a href="/videos">Videos</a>
+                        <a href="/technical">Analysis</a>
+                    </div>
+                </div>
+            </li>
+            <li class="item"><a href="/about">About</a></li>
+            <li class="item"><a href="/contact">Contact</a></li>
+            <!-- <li class="item"><a href="/videos">Videos</a></li> -->
+
+        </ul>
+    </nav>
+    <section id="home">
+     
+        <div class="mar">
+            <h1 class="primary center main">
+                <a href="" class="typewrite" data-period="2000"
+                    data-type='[ "Welcome to Dacon Stocks","New in Stock Market?", "Learn to trade here!!" ]'>
+                    <span class="wrap"></span>
+                </a>
+            </h1>
+        </div>
+        <script>
+            var TxtType = function (el, toRotate, period) {
+                this.toRotate = toRotate;
+                this.el = el;
+                this.loopNum = 0;
+                this.period = parseInt(period, 10) || 2000;
+                this.txt = '';
+                this.tick();
+                this.isDeleting = false;
+            };
+
+            TxtType.prototype.tick = function () {
+                var i = this.loopNum % this.toRotate.length;
+                var fullTxt = this.toRotate[i];
+
+                if (this.isDeleting) {
+                    this.txt = fullTxt.substring(0, this.txt.length - 1);
+                } else {
+                    this.txt = fullTxt.substring(0, this.txt.length + 1);
+                }
+
+                this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+                var that = this;
+                var delta = 200 - Math.random() * 100;
+
+                if (this.isDeleting) { delta /= 2; }
+
+                if (!this.isDeleting && this.txt === fullTxt) {
+                    delta = this.period;
+                    this.isDeleting = true;
+                } else if (this.isDeleting && this.txt === '') {
+                    this.isDeleting = false;
+                    this.loopNum++;
+                    delta = 500;
+                }
+
+                setTimeout(function () {
+                    that.tick();
+                }, delta);
+            };
+
+            window.onload = function () {
+                var elements = document.getElementsByClassName('typewrite');
+                for (var i = 0; i < elements.length; i++) {
+                    var toRotate = elements[i].getAttribute('data-type');
+                    var period = elements[i].getAttribute('data-period');
+                    if (toRotate) {
+                        new TxtType(elements[i], JSON.parse(toRotate), period);
+                    }
+                }
+
+            };
+        </script>
+
+    </section>
+    <section id="services-container">
+        <h1 class="services center">Our Services</h1>
+        <div id="services">
+            <div class="box">
+                <img src="/public/im/trading_articles.png" alt="" width="90%">
+                <h2 class="secondary center">
+                    <a href="/article">Trading Articles</a>
+                </h2>
+            
+            </div>
+            <div class="box">
+                <img src="/public/im/a1.jpg" alt="">
+                <h2 class="secondary center">
+                    <a href="/videos">Expert Interviews and Guidance </a>
+                </h2>
+              
+            </div>
+            <div class="box">
+                <img src="/public/im/a10.jpg" alt="">
+                <h2 class="secondary center">
+                    <a href="/technical">Technical Analysis</a>
+                </h2>
+             
+            </div>
+        </div>
+    </section>
+    <section class="partner">
+        <h1 class="trade center">Best Online Traders</h1>
+        <div id="partner-maindiv">
+            <div class="partner-box">
+                <img src="/public/im/Zerodha-Logo.jpg" alt="error!!" srcset="">
+                <h1><a href="https://zerodha.com/" target="_blank">Zerodha.com</a></h1>
+
+            </div>
+            <div class="partner-box">
+                <img src="/public/im/icicidirect.jpg" alt="error!!" srcset="">
+                <h1><a href="https://www.icicidirect.com/idirectcontent/Home/Home.aspx"
+                        target="_blank">ICICDirect.com</a></h1>
+
+            </div>
+            <div class="partner-box">
+                <img src="/public/im/Sharekhan-Karnal.jpg" alt="error!!" srcset="">
+                <h1><a href="https://www.sharekhan.com/" target="_blank">SherKhan.com</a></h1>
+
+            </div>
+            <div class="partner-box">
+                <img src="/public/im/hdfc-securities-1.jpg" alt="error!!" srcset="">
+                <h1><a href="https://www.hdfcsec.com/" target="_blank">HDFCSecurities.com</a></h1>
+
+            </div>
+            <div class="partner-box">
+                <img src="/public/im/sbisecurities.png" alt="error!!" srcset="">
+                <h1><a href="https://www.sbismart.com/" target="_blank">SBISecurities.com</a></h1>
+
+            </div>
+            <div class="partner-box">
+                <img src="/public/im/angel.jpg" alt="error!!" srcset="">
+                <h1><a href="https://www.angelbroking.com/" target="_blank">AngelBroking.com</a></h1>
+
+            </div>
+            <div class="partner-box">
+                <img src="/public/im/axisdirect.jpg" alt="error!!" srcset="">
+                <h1><a href="https://login.axisdirect.in/" target="_blank">AxisDirect.com</a></h1>
+
+            </div>
+            <div class="partner-box">
+                <img src="/public/im/reliancesecurities.webp" alt="error!!" srcset="">
+                <h1><a href="https://www.reliancesmartmoney.com/" target="_blank">RelianceSecurities.com</a></h1>
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="center">
+            Copyright &copy; www.DaconStocks.com <br> All Rights Reserved!
+        </div>
+
+    </footer>
+
+    <script>
+
+    </script>
+</body>
+
+</html>

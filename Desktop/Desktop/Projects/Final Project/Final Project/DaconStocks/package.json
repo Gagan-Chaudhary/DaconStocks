@@ -25,7 +25,7 @@
     "nodemailer": "^6.4.8",
     "nodemailer-mailgun-transport": "^2.0.0",
     "path": "^0.12.7",
-    "pug": "^3.0.0",
+    "pug": "^3.0.1",
     "unirest": "^0.6.0"
   },
   "devDependencies": {

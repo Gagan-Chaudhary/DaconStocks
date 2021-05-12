@@ -22,7 +22,7 @@
     "express-ejs-layouts": "^2.5.0",
     "express-handlebars": "^4.0.4",
     "mongoose": "^5.9.16",
-    "nodemailer": "^6.4.8",
+    "nodemailer": "^6.4.16",
     "nodemailer-mailgun-transport": "^2.0.0",
     "path": "^0.12.7",
     "pug": "^3.0.0",

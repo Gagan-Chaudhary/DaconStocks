@@ -19,7 +19,7 @@
     "express-handlebars": "^4.0.4",
     "mongoose": "^5.9.16",
     "nodemailer": "^6.4.8",
-    "nodemailer-mailgun-transport": "^2.0.0",
+    "nodemailer-mailgun-transport": "^2.1.5",
     "path": "^0.12.7",
     "pug": "^3.0.0",
     "unirest": "^0.6.0",
